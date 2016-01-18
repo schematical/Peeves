@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class='no-js' lang='en'>
+<html class='no-js' lang='en' ng-app="sogotp">
   <!--<![endif]-->
 <head>
     {{! Document Settings }}
@@ -17,6 +17,12 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+
+    <meta property="og:url"           content="{{url absolute="true"}}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{meta_title}}" />
+    <meta property="og:description"   content="{{meta_description}}" />
+    <meta property="og:image"         content="{{image}}" />
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
@@ -45,7 +51,7 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body itemscope itemtype="http://schema.org/Blog">
+<body itemscope itemtype="http://schema.org/Blog" ng-controller="MainCtrl">
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -79,7 +85,9 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
     <script src="{{asset "scripts/backstretch.min.js"}}"></script>
     
     <script src="{{asset "scripts/highlight.pack.js"}}"></script>
@@ -97,6 +105,10 @@
     <script src="{{asset "scripts/nanobar.min.js"}}"></script>
 
     <script src="{{asset "scripts/main.js"}}"></script>
+
+    <script src="{{asset "scripts/vendor/angular-1.4.8.min.js"}}"></script>
+
+    <script src="{{asset "scripts/app.js"}}"></script>
 
     {{> google-analytics}}
 
