@@ -5,22 +5,30 @@
 
 {{! The big featured header on the homepage, with the site logo and description }}
 <header class="main-header tag-page-header">
-  <div class="grid-container grid-720">
-    <h1 id="tag-search"></h1>
-  </div>
-</header>
-
-
-<section id="post-container" role='main' class="main-section hide-post">
     <div class="grid-container grid-720">
-      <section class="related-posts">
-        <small>Related posts</small>
-      </section>
-
-    {{! The tag below includes the post loop - partials/post-loop.hbs }}
-    {{> "post-loop"}}
-
-    {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}}
+        <h1 id="tag-search"></h1>
     </div>
-</section>
+</header>
+<div class="grid-container">
+    <div class=" grid-75">
+
+        <section id="post-container" role='main' class="main-section hide-post">
+            <div class="grid-container grid-720">
+                <section class="related-posts">
+                    <small>Related posts</small>
+                </section>
+
+				{{! The tag below includes the post loop - partials/post-loop.hbs }}
+				{{> "post-loop"}}
+
+				{{!! After all the posts, we have the previous/next pagination links }}
+				{{pagination}}
+            </div>
+        </section>
+    </div>
+    <div class="grid-25">
+		{{> "good_sidebar" }}
+
+
+    </div>
+</div>
