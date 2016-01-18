@@ -48,35 +48,8 @@
         </section>
     </div>
     <div class="grid-25">
+		{{> "good_sidebar" }}
 
 
-        <h1>Follow</h1>
-        <ul style="list-style-type:none;">
-			<li><a href="http://instagram.com/hacker.matt/" target="_blank">Instagram</a></li>
-            <li><a href="https://github.com/schematical" target="_blank">Github</a></li>
-			<li><a href="https://twitter.com/schematical" target="_blank">Twitter</a></li>
-			<li><a href="https://www.facebook.com/shiporgetoffthepot" target="_blank">Facebook</a></li>
-		</ul>
-
-        <h1>Links</h1>
-        <ul style="list-style-type:none;">
-			<li><a href="/">Home</a></li>
-			<li><a href="/work-with-me/">Work With Me</a></li>
-			<li><a href="http://schematical.com?ref=shiporgetoffthepot.com" target="_blank">Schematical.com</a></li>
-			<!--<li><a href="/about/">About</a></li>-->
-			<li><a href="/press/">Press</a></li>
-		</ul>
-
-        <h1>Topics</h1>
-        <tag-list tags="tags"></tag-list>
-
-		{{#get "posts" filter="featured:true" limit="3" as |featured|}}
-				<h1>Popular Posts</h1>
-				<ul style="list-style-type:none;">
-					{{#foreach featured}}
-						<li style="margin-bottom: 20Px;	"><a href="{{url}}">{{title}}</a></li>
-					{{/foreach}}
-				</ul>
-		{{/get}}
     </div>
 </div>
